@@ -113,6 +113,8 @@ a {
 .intro-right {
   position: relative;
   left: 6em;
+  display: inline-block;
+  margin-left: 100px;
 }
 .intro-flex {
   display: flex;
@@ -384,4 +386,72 @@ input:focus {
 .footer-sub {
   position: relative;
   margin: 2% 1%;
+}
+.move {
+  margin-left: -182px;
+}
+@media only screen and (max-width: 767px) {
+  .intro-h1 {
+    display: inline;
+    margin-left: 4%;
+  }
+  .intro-nav {
+    padding: 0;
+  }
+  .intro-right {
+    position: relative;
+    left: em;
+    right: 3em;
+    margin-left: 0;
+  }
+  .live-right {
+    line-height: 20px;
+    position: relative;
+    bottom: 228px;
+  }
+  .move {
+    margin-left: 7px;
+  }
+  .upcoming-div div:first-child img {
+    width: 4em;
+  }
+  .upcoming-grid {
+    grid-template-columns: auto auto;
+  }
+  .box {
+    display: grid;
+  }
+  .sub {
+    position: relative;
+    font-size: 2.5vw;
+    margin: 0;
+    text-align: center;
+  }
+  .count-border {
+    margin: auto;
+    width: 14%;
+    border: 0.5px solid rgb(169, 169, 169, 0.2);
+    border-radius: 13px;
+    padding: 3vh 2vw;
+    margin-bottom: 0;
+    line-height: 1.3;
+  }
+  .count-sub-border {
+    background-color: #7ba435;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 7px;
+    margin-left: 0;
+  }
+  .subscribe {
+    font-size: 1.3vw;
+    position: relative;
+    left: 3vw;
+  }
+  .end-input {
+    right: 3vw;
+  }
+  .end-flex {
+    left: 3vw;
+  }
 }
