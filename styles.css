@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: var(--exo) !important;
-  background-color: #000f2e;
+  /* background-color: #000f2e; */
+  overflow-x: hidden;
 }
 body,
 button {
@@ -17,11 +18,12 @@ button {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
   font-family: var(--exo) !important;
 }
 .intro-h1 {
   display: inline;
-  margin-left: 9%;
+  margin-left: -258px;
 }
 .button,
 .pages {
@@ -34,7 +36,7 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
   bottom: 6px;
-  left: 7.8vw;
+  left: 130px;
   font-size: 14px;
   font-family: var(--exo) !important;
 }
@@ -55,7 +57,7 @@ a {
 }
 .intro-sub {
   position: relative;
-  left: 7vw;
+  left: 100px;
 }
 .intro-cont {
   position: relative;
@@ -72,16 +74,14 @@ a {
   filter: brightness(1000%);
 }
 .intro-left {
-  position: relative;
-  font-size: 1em;
-  left: 15vw;
+  margin-right: -230px;
 }
 .intro-navflex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: baseline;
 }
 .play_now {
@@ -105,6 +105,7 @@ a {
   border: none;
   box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
+  margin-left: 22px;
 }
 
 .play:hover {
@@ -120,7 +121,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: flex-start;
 }
@@ -213,12 +214,12 @@ hr {
 .upcoming-grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: start;
+  justify-content: center;
   align-items: stretch;
   justify-items: center;
   row-gap: 34px;
   column-gap: 4vw;
-  margin-left: 16vw;
+  /* margin-left: 16vw; */
   margin-top: 92px;
 }
 .upcoming-div {
@@ -314,7 +315,7 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: stretch;
 }
 
@@ -328,10 +329,10 @@ hr {
 .end-right {
   position: relative;
   background-color: white;
-  padding: 0.6vw 5.2vw;
+  padding: 10px 65px;
   border-radius: 13px;
-  bottom: 2vw;
-  left: 6vw;
+  bottom: 23px;
+  left: 52px;
 }
 
 .end-input {
@@ -390,7 +391,7 @@ input:focus {
 .move {
   margin-left: -182px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 769px) {
   .intro-h1 {
     display: inline;
     margin-left: 4%;
