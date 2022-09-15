@@ -1,11 +1,15 @@
-body {
-  margin: 0;
-  font-family: var(--exo) !important;
-  /* background-color: #000f2e; */
-  overflow-x: hidden;
-}
 body,
 button {
+  font-family: var(--exo) !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: auto;
   font-family: var(--exo) !important;
 }
 :root {
@@ -24,6 +28,9 @@ button {
 .intro-h1 {
   display: inline;
   margin-left: -258px;
+}
+.live-right h1 {
+  font-size: 36px;
 }
 .button,
 .pages {
@@ -66,6 +73,7 @@ a {
   font-weight: 900;
   transform: rotate(-20deg);
   color: white;
+  margin: 0 12px;
 }
 .fa-cart-shopping {
   color: white;
@@ -192,19 +200,34 @@ hr {
   font-family: var(--exo) !important;
   font-size: 21px;
 }
-
+.watch-button a {
+  position: relative;
+  bottom: 5px;
+}
+.move {
+  margin-left: -182px;
+}
 #upcoming {
   background-color: #06172e;
   color: white;
   padding-bottom: 54px;
 }
-
+.upcoming-1 h1 {
+  font-size: 50px;
+}
 .upcoming-1 {
   text-align: center;
   position: relative;
   top: 54px;
 }
-
+.play-button {
+  position: relative;
+  left: 42%;
+  top: 22px;
+}
+.sty {
+  line-height: 2;
+}
 .upcoming-img {
   width: 100px;
   height: auto;
@@ -260,6 +283,9 @@ hr {
   color: #7ba435;
 }
 
+.upcoming-div:hover {
+  border: 1px solid rgb(123, 164, 53);
+}
 .upcoming-div hr {
   width: 120%;
   position: relative;
@@ -274,17 +300,16 @@ hr {
 #count {
   background-color: #000f2e;
   color: white;
-  margin: 29px 0px;
   line-height: 0.5;
+  padding: 36px 0px;
 }
 
 .count-border {
-  margin: auto;
-  width: 44%;
   border: 0.5px solid rgb(169, 169, 169, 0.2);
-  border-radius: 13px;
-  padding: 1px 165px 32px 165px;
-  margin-bottom: 40px;
+  margin: 0px 17vw;
+  border-radius: 10px;
+  padding: 14px 0 23px 0;
+  font-size: 24px;
 }
 .count-sub-border {
   background-color: #7ba435;
@@ -295,17 +320,17 @@ hr {
 }
 
 .sub {
-  position: relative;
-  left: 10px;
-  font-size: 2.5vw;
-  margin: 0 -126px;
+  margin: 0px 36px;
 }
 .box {
-  display: flex;
+  display: grid;
+  grid-auto-columns: max-content;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-items: center;
+  grid-auto-rows: max-content;
+  align-content: center;
+  grid-template-columns: auto auto auto auto;
 }
 
 /* Ending Section */
@@ -388,27 +413,56 @@ input:focus {
   position: relative;
   margin: 2% 1%;
 }
-.move {
-  margin-left: -182px;
-}
-@media only screen and (max-width: 769px) {
+
+@media only screen and (max-width: 875px) {
   .intro-h1 {
-    display: inline;
-    margin-left: 4%;
+    margin-left: 0;
+  }
+  .intro-left {
+    margin-right: 0;
+  }
+  #intro {
+    text-align: center;
+  }
+  .intro-nav div {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+    align-content: center;
+  }
+  .button,
+  .pages {
+    top: 10px;
+    bottom: 0;
+    left: 0;
   }
   .intro-nav {
     padding: 0;
   }
-  .intro-right {
+  .intro-navflex {
+    display: block;
+  }
+  .intro-sub {
     position: relative;
-    left: em;
-    right: 3em;
+    top: 10px;
+    left: 0;
+    bottom: 30px;
+  }
+  .intro-flex {
+    margin-top: 16px;
+  }
+  .intro-right {
     margin-left: 0;
+    left: 0;
   }
   .live-right {
     line-height: 20px;
     position: relative;
     bottom: 228px;
+    text-align: center;
+    left: 63px;
   }
   .move {
     margin-left: 7px;
@@ -430,18 +484,19 @@ input:focus {
   }
   .count-border {
     margin: auto;
-    width: 14%;
+    width: 27%;
     border: 0.5px solid rgb(169, 169, 169, 0.2);
     border-radius: 13px;
     padding: 3vh 2vw;
     margin-bottom: 0;
     line-height: 1.3;
+    grid-template-columns: auto auto;
   }
   .count-sub-border {
     background-color: #7ba435;
     padding: 5px;
     border-radius: 10px;
-    font-size: 7px;
+    font-size: 1vw;
     margin-left: 0;
   }
   .subscribe {
@@ -449,10 +504,121 @@ input:focus {
     position: relative;
     left: 3vw;
   }
+  .subscribe div {
+    display: block;
+  }
+  .subscribe div:first-child {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 34px;
+  }
   .end-input {
     right: 3vw;
   }
   .end-flex {
     left: 3vw;
+  }
+  .end-right {
+    position: relative;
+    background-color: white;
+    padding: 10px 65px;
+    border-radius: 13px;
+    bottom: 23px;
+    left: 24px;
+    /* top: 10px; */
+    margin-top: 35px;
+  }
+}
+
+.demo div:first-child {
+  padding: 57px;
+  background-color: #06172e;
+}
+.demo div:nth-child(2) {
+  padding: 14px;
+  background-color: #001133;
+}
+@media only screen and (max-width: 710px) {
+  .move img {
+    width: 65vw;
+    height: auto;
+  }
+  /* .move span {
+    position: relative;
+    left: 10px;
+    right: 0;
+    top: 0;
+  } */
+  .sub {
+    font-size: 4vh;
+    margin-right: 2vw;
+  }
+  .play {
+    margin: 0;
+    left: 0;
+  }
+  .live {
+    bottom: 22vw;
+    left: -41vw;
+    position: relative;
+  }
+  .watch-button {
+    font-size: 2.7vw;
+  }
+}
+/* @media only screen and (max-width: 529x) {
+  .play {
+    margin: 0;
+    left: 0;
+  }
+  .live {
+    bottom: 22vw;
+    left: 100px
+    position: relative;
+  }
+} */
+@media only screen and (max-width: 431px) {
+  .move img {
+    width: 270px;
+    height: 186px;
+  }
+  .play {
+    margin: 0;
+    left: 92px;
+    bottom: 249px;
+  }
+
+  .move span {
+    bottom: -54px;
+    position: relative;
+    left: 80px;
+  }
+  .watch-button {
+    left: 57px;
+    padding: 104px 17px;
+    bottom: 123px;
+    font-size: 12px;
+  }
+  .live-right {
+    left: 83px;
+  }
+  .upcoming-div {
+    margin: 0 7px;
+  }
+  .subscribe {
+    margin-right: 30px;
+  }
+  .end-right {
+    padding: 8px 18px;
+  }
+  .count-border {
+    grid-template-columns: auto;
+  }
+  .sub {
+    font-size: 18px;
+  }
+  .count-sub-border {
+    font-size: 10px;
   }
 }
